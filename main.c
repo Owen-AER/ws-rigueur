@@ -5,7 +5,7 @@
 ** WS AER - CPOOL 2029
 */
 
-void main(int ac, char * const *av)
+void main(int ac, char const *argv[])
 {
     project(ac, av);
 }

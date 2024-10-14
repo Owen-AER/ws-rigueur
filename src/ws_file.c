@@ -23,11 +23,10 @@ char *my_strdup(char const *old)
         new[i] = old[i];
         i++;
     }
-    new[i] = '\0';
     return (new);
 }
 
-int project(int ac, const char * const *av)
+int project(int ac, char const *argv[])
 {
     char *str = my_strdup(av[1]);
     int x = 1500;
@@ -36,5 +35,5 @@ int project(int ac, const char * const *av)
         x = div(x, i);
     }
 
-    printf("%s\n", str);
+    write(1, str, my_strlen(str));
 }
